@@ -39,13 +39,15 @@ songTitles:["Strangers by Nature","Easy on Me", "My Little Love", "Cry Your Hear
 //localhost:3000/
 
 app.get('/', (req, res) =>{
-    res.send(`<h1>Adele</h1>
+    res.send(`
+    <h1>Adele</h1>
     
     <p>
     Adele (full name Adele Laurie Blue Adkins) is a multiple Grammy award-winning singer-songwriter from London. Her career started in 2006 upon graduating from the Brit School for performing arts. After a three-track demo was posted online she was quickly signed to XL Recordings, leading to the release of her breakthrough track Hometown Glory in 2007. She has topped global charts with her albums 19, 21 and 25, and also performed the theme song to the James Bond film Skyfall in 2012. 
     </p>
 
-    <img src="images/adele-awards.jpg" width="400px">
+    <img src="/images/adele-awards.jpg" width="400px">
+    <img src="/images/adele-awards.jpg" width="400px">
     `)
 })
 
