@@ -5,16 +5,25 @@ body{
 }
 
 .header{
-    height: 1000px;
+    height: 100vh;
     overflow: hidden;
     position: relative;
+}
+
+.bio{
+  background-color: transparent;
+  color: white;
+  width: 600px;
+  text-align: right;
+  z-index: 1;
 }
 
 .heroImage{
     min-width: 100%;
     object-position: 0px 0px;
-    margin-top: -600px;
+    margin-top: -525px;
     position: absolute;
+    z-index: 0;
 
 }
 
@@ -31,6 +40,10 @@ a{
     width: 100%; /* Full width */
     height: 100px;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
   }
   
   /* Links inside the navbar */
@@ -42,12 +55,23 @@ a{
     align-items: flex-end; */
     padding: 14px 16px;
     text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: lighter;
+  }
+
+  .navbar-brand {
+    display: flex;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: lighter;
   }
   
   /* Change background on mouse-over */
   .navbar a:hover {
-    background: #ddd;
-    color: #333;
+    color: rgb(161, 161, 161);
   }
   
   /* Main content */

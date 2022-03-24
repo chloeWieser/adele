@@ -14,22 +14,20 @@
 <body>
 
     <div class="navbar">
-        <a href="/cds">Albums</a>
-        <a href="#Chat">Chat</a>
-        <a href="/">Home</a>
+        <div class="navbar-brand"><a href="/">ADELE</a> </div>
+        <div>
+            <a href="#Contact">Contact</a>
+            <a href="#Chat">Chat</a>
+            <a href="/cds">Albums</a>
+            <a href="/">Home</a>
+        </div>
     </div>
 
     <main class="main">
 <!-- ********pasted from albums.js -->
-        <!-- let id = req.params.id;
-        let name = songs.songs[id].name;
-        let imgURL = songs.songs[id].imgURL;
-        let songTitles = songs.songs[id].songTitles;
+
     
-        let songTitlesLi = "";
-        songTitles.forEach(songTitle => songTitlesLi +=`<li>${songTitle}</li>\n`)
-    
-        res.send(`
+
             <h1>All Albums</h1>
             
             <ul>
@@ -40,16 +38,16 @@
             </ul>
     
     
-            <h2>Album name: ${name}</h2>
+            <h2>Album name: <%= name %></h2>
     
             <h2>Songs:</h2> 
     
             <ul>
-                ${songTitlesLi}
+                <%- songTitlesLi %>
             </ul>
     
-            <img src="${imgURL}" width="400px">
-        `) -->
+            <img src="<%= imgURL %>" width="400px">
+
 
     </main>
 

@@ -5,6 +5,7 @@ const express = require('express'); //this is same as app.js file
 //2. invoke the express sub-router on the object that is already in the project
 const router = express.Router()   //note we are using the variable name 'router' instead of 'app' and it's express.Router because we are creating a sub route
 
+
 router.get('/', (req, res) =>{ //note we are using router.get i/o app.get bc this is a 'sub-router'    also note below that the browser/express KNOWS to look for the css folder in public folder(where all the static files are kept!)
 
     // replacing below res.send with res.render so it can connect from ejs file:
