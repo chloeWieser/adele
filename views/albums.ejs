@@ -28,25 +28,24 @@
 
     
 
-            <h1>All Albums</h1>
+            <h1>ALBUMS</h1>
             
-            <ul>
+            <ul class="albumTitles">
                 <li><a href="/albums/0"> 19</a></li>
                 <li><a href="/albums/1"> 21</a></li>
                 <li><a href="/albums/2"> 25</a></li>
                 <li><a href="/albums/3"> 30</a></li>
             </ul>
+            
+            <img src="<%= imgURL %>" width="300px" class="albumImg">
     
     
-            <h2>Album name: <%= name %></h2>
+            <h2>Songs in album: <%= name %></h2> 
     
-            <h2>Songs:</h2> 
-    
-            <ul>
+            <ul class="songTitles">
                 <%- songTitlesLi %>
             </ul>
     
-            <img src="<%= imgURL %>" width="400px">
 
 
     </main>
