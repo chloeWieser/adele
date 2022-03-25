@@ -16,9 +16,8 @@
     <div class="navbar">
         <div class="navbar-brand"><a href="/">ADELE</a> </div>
         <div>
-            <a href="#Contact">Contact</a>
-            <a href="#Chat">Chat</a>
-            <a href="/cds">Albums</a>
+            <a href="#Forum">Forum</a>
+            <a href="/cds" class="selected">Albums</a>
             <a href="/">Home</a>
         </div>
     </div>
@@ -26,10 +25,7 @@
     <main class="main">
 <!-- ********pasted from albums.js -->
 
-    
 
-            <h1>ALBUMS</h1>
-            
             <ul class="albumTitles">
                 <li><a href="/albums/0"> 19</a></li>
                 <li><a href="/albums/1"> 21</a></li>
@@ -40,7 +36,7 @@
             <img src="<%= imgURL %>" width="300px" class="albumImg">
     
     
-            <h2>Songs in album: <%= name %></h2> 
+            <h2>Songs in <%= name %></h2> 
     
             <ul class="songTitles">
                 <%- songTitlesLi %>
