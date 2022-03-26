@@ -9,9 +9,9 @@ form.addEventListener('submit', async (e) =>{
     //make a fetch /api
 
     let newMessage = {
-        name: document.querySelector('#feedback-form-name').value, 
-        title: document.querySelector('#feedback-form-title').value, 
-        message: document.querySelector('#feedback-form-message').value
+        name: document.querySelector('#forum-form-name').value, 
+        title: document.querySelector('#forum-form-title').value, 
+        message: document.querySelector('#forum-form-message').value
     }
 
     let results = await fetch('/api', {
@@ -21,7 +21,7 @@ form.addEventListener('submit', async (e) =>{
     })
 
     let messages = await results.json() //[{}, {}, {}]
-    updateFeedback(messages)
+    updateforum(messages)
 
 })
 
@@ -37,31 +37,31 @@ const displayMessages = async () => {
     let result = await fetch ('/api');
     let messages = await result.json(); //[{}, {}, {}]
 
-    updateFeedback(messages)
+    updateforum(messages)
 };
 
 
 
-const updateFeedback = (messagesArr) => {
+const updateforum = (messagesArr) => {
     let htmlBlock = "";
     messagesArr.forEach((item, key) =>{   //item is each object in the array
 
-        htmlBlock += '     <div class="feedback-item item-list media-list">';
-        htmlBlock += '       <div class="feedback-item media">';
-        htmlBlock += '       <div class="media-left"><button class="feedback-delete btn btn-xs btn-danger"><span id="' + key + '" class="glyphicon glyphicon-remove"></span></button></div>';
-        htmlBlock += '         <div class="feedback-info media-body">';
-        htmlBlock += '           <div class="feedback-head">';
-        htmlBlock += '             <div class="feedback-title">' + item.title + ' <small class="feedback-name label label-info">' + item.name + '</small></div>';
+        htmlBlock += '     <div class="forum-item item-list media-list">';
+        htmlBlock += '       <div class="forum-item media">';
+        htmlBlock += '       <div class="media-left"><button class="forum-delete btn btn-xs btn-danger"><span id="' + key + '" class="glyphicon glyphicon-remove"></span></button></div>';
+        htmlBlock += '         <div class="forum-info media-body">';
+        htmlBlock += '           <div class="forum-head">';
+        htmlBlock += '             <div class="forum-title">' + item.title + ' <small class="forum-name label label-info">' + item.name + '</small></div>';
         htmlBlock += '           </div>';
-        htmlBlock += '           <div class="feedback-message">' + item.message + '</div>';
+        htmlBlock += '           <div class="forum-message">' + item.message + '</div>';
         htmlBlock += '         </div>'; 
         htmlBlock += '       </div>';
         htmlBlock += '     </div>';
     })
     
     //attach to a dom element
-    let feedbackMessages = document.querySelector('.feedback-messages');
-    feedbackMessages.innerHTML = htmlBlock;
+    let forumMessages = document.querySelector('.forum-messages');
+    forumMessages.innerHTML = htmlBlock;
 }
 
 displayMessages()
