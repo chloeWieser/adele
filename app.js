@@ -30,7 +30,19 @@ app.use(require('./routes/cds'))  //this brings back the songs route BACK into t
 
 //***********3.23 evening removed albums content to move it over to the js file in the routes folder & added the app.use below
 
-app.use(require('./routes/albums'))  //this brings back the songs route BACK into the app instance
+app.use(require('./routes/albums'))  
+
+
+
+// localhost:3000/feedback 
+
+app.use(require('./routes/feedback')) 
+
+
+
+// localhost:3000/forum
+
+app.use(require('./routes/forum')) 
 
 
 

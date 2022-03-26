@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">REMOVED 3.24 -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-brand"><a href="/">ADELE</a> </div>
+        <div>
+            <a href="/forum">Forum</a>
+            <a href="/feedback" class="selected">Feedback</a>
+            <a href="/cds">Albums</a>
+            <a href="/">Home</a>
+        </div>
+    </div>
+
+    <div class="main container">   
+
+
+                <h1 class="feedback-form-title">Send a note!</h1>
+                <!-- we don't want page to re-render so feedback just appears to the side: -->
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label for="feedback-form-name">Name</label>
+                        <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback-form-title">Title</label>
+                        <input type="text" class="form-control" id="feedback-form-title"
+                            placeholder="Title of your feedback">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback-form-message">Message</label>
+                        <textarea type="text" placeholder="Enter your message, then hit the submit" class="form-control"
+                            id="feedback-form-message" rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default pull-right">Submit</button>
+                </form>
+
+
+
+                <div class="maincontent feedback">
+                    <h2 class="article-title">Recent</h2>
+                    <div class="feedback-messages">
+
+                    </div>
+                </div>
+
+
+    </div><!-- container -->
+
+    <script src="/js/feedbackClient.js"></script>
+
+
+</body>
+
+</html>
