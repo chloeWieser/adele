@@ -4,6 +4,7 @@ body{
     color: white;
 }
 
+
 .header{
     height: 100vh;
     overflow: hidden;
@@ -195,12 +196,11 @@ input[type=text], textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 
-
 }
 
 /* Style the submit button with a specific background color etc */
 button[type=submit] {
-  background-color: black;
+  background-color: transparent;
   color: white;
   padding: 8px 20px;
   border: solid white 2px;
@@ -214,16 +214,26 @@ button[type=submit]:hover {
   box-shadow: 0 0 10px white;
 }
 
-.forumElements{
+.forumPosts{
   margin: 24px;
+  width: 32vw;
+}
+
+.forumInput{
+  margin: 24px;
+  width: 24vw;
 }
 
 .forumContainer{
+  width: 50vw;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   padding: 36px;
-
+  background-color: rgb(58, 57, 57);
+  margin:100px auto;
 }
 
 .forum-form{
@@ -248,6 +258,7 @@ label{
   display: flex;
   flex-direction: row;
   padding: 0px 8px 16px 8px;
+  width: 100%;
 }
 
 .post-head{
@@ -260,7 +271,7 @@ label{
 
 .post-delete{
   color:white;
-  background-color: black;
+  background-color: transparent;
   border: none;
 }
 
