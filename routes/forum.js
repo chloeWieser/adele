@@ -34,7 +34,7 @@ router.get('/api', (req, res)=>{
 //submit new message
 router.post('/api', (req, res)=>{
     let {name, title, message} = req.body;
-    //add mssg to the json file by pushing to the javascript object, then convert onj to a json string and resave it
+    //add mssg to the json file by pushing to the javascript object, then convert obj to a json string and resave it
     //push data to forumData obj; actually we will do unshift so it appears at the beginning
     forumData.unshift(req.body);
 
@@ -51,7 +51,25 @@ router.post('/api', (req, res)=>{
 res.json(forumData)
 })
 
-//delete a message
+
+
+//delete a message //(added 3.27)
+router.delete('/api', (req, res)=>{
+    let { id } = req.body;
+    //delete mssg from json file by SHIFT-ing from the javascript object, then convert obj to a json string and resave it
+    forumData.splice(id, 1);
+
+    fs.writeFile('data/forum.json', JSON.stringify(forumData), 'utf8', err=>{  //pass in the file we want to write to- the reference is from the top of the application data
+        if(err){
+            console.log(err);
+        }
+
+        console.log('forum.json file has been updated');
+    })
+//send back all of the messages with the new message attached
+    res.json(forumData)
+})
+
 
 
 module.exports = router;
