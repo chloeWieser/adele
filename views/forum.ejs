@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Document</title>
+    <title>Forum</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,42 +20,42 @@
         <div class="navbar-brand"><a href="/">ADELE</a> </div>
         <div>
             <a href="/forum" class="selected">Forum</a>
-            <a href="/feedback">Feedback</a>
             <a href="/cds">Albums</a>
             <a href="/">Home</a>
         </div>
     </div>
 
-    <div class="main container">   
+    <div class="main forumContainer">   
 
+            <div class="forumElements">
+                <h3 class="title">Send a note!</h3>
 
-                <h1 class="forum-form-title">Send a note!</h1>
-                <!-- we don't want page to re-render so input message just appears to the side: -->
                 <form class="forum-form">
                     <div class="form-group">
-                        <label for="forum-form-name">Name</label>
-                        <input type="text" class="form-control" id="forum-form-name" placeholder="Enter your name">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
                     </div>
 
                     <div class="form-group">
-                        <label for="forum-form-title">Title</label>
-                        <input type="text" class="form-control" id="forum-form-title"
+                        <label for="title">Title</label>
+                        <input type="text" id="title"
                             placeholder="Title your message">
                     </div>
 
                     <div class="form-group">
-                        <label for="forum-form-message">Message</label>
-                        <textarea type="text" placeholder="Enter your message, then hit the send" class="form-control"
-                            id="forum-form-message" rows="6"></textarea>
+                        <label for="message">Message</label>
+                        <textarea type="text" placeholder="Enter your message, then hit send"
+                            id="message" rows="6"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-default pull-right">Send</button>
+                    <button type="submit" >Send</button>
                 </form>
+            </div>
 
 
 
-                <div class="maincontent forum">
-                    <h2 class="article-title">Recent</h2>
-                    <div class="forum-messages">
+                <div class="forumElements">
+                    <h3>Recent posts</h3>
+                    <div class="posts">
 
                     </div>
                 </div>
@@ -64,6 +64,7 @@
     </div><!-- container -->
 
     <script src="/js/forumClient.js"></script>
+    <script src="https://kit.fontawesome.com/fab316d457.js" crossorigin="anonymous"></script>
 
 
 </body>

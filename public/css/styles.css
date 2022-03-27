@@ -31,6 +31,16 @@ h2{
   justify-content: center;
 }
 
+h3{
+  display: flex;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content:flex-start;
+}
+
 .bio{
   position: absolute;
   background-color: transparent;
@@ -171,3 +181,94 @@ a{
     margin-top: 600px;
     z-index: 3;
   }
+
+/* Style inputs with type="text" and textareas */
+input[type=text], textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+
+
+}
+
+/* Style the submit button with a specific background color etc */
+button[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 8px 20px;
+  border: solid white 2px;
+  border-radius: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+/* When moving the mouse over the submit button, add a grey color */
+button[type=submit]:hover {
+  box-shadow: 0 0 10px white;
+}
+
+.forumElements{
+  margin: 24px;
+}
+
+.forumContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 36px;
+
+}
+
+.forum-form{
+  padding-left: 22px;
+}
+
+label{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#message{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.posts{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 32px;
+}
+
+.post-item{
+  display: flex;
+  flex-direction: row;
+  padding: 0px 8px 16px 8px;
+}
+
+.post-head{
+  padding-left: 8px;
+}
+
+.post{
+  padding-left: 8px;
+}
+
+.post-delete{
+  color:white;
+  background-color: black;
+  border: none;
+}
+
+.post-name{
+  background-color: rgb(161, 161, 161);
+  color: black;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-left: 8px;
+  font-weight: bold;
+}

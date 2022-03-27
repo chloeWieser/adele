@@ -34,12 +34,6 @@ app.use(require('./routes/albums'))
 
 
 
-// localhost:3000/feedback 
-
-app.use(require('./routes/feedback')) 
-
-
-
 // localhost:3000/forum
 
 app.use(require('./routes/forum')) 
