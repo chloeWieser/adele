@@ -162,7 +162,7 @@ a{
     color: rgb(161, 161, 161);
   }
 
-  .albumTitles a:active{
+  .albumTitles a.active{
     color: rgb(161, 161, 161);
   }
 
@@ -178,9 +178,34 @@ a{
     margin: 24px; 
   }
 
-  .bottomTemp{
-    margin-top: 600px;
-    z-index: 3;
+  
+  .bgImage {
+    /* Set rules to fill background */
+    filter:blur(8px);
+    min-width: 1024px;
+
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+  }
+
+  
+  @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    .bgImage {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
   }
 
 /* Style inputs with type="text" and textareas */
@@ -217,27 +242,37 @@ button[type=submit]:hover {
 .forumPosts{
   margin: 24px;
   width: 32vw;
+  height: 490px;
+  background-color: rgba(2, 2, 2, 0.5);
+  overflow: scroll;
+}
+
+.forumPosts::-webkit-scrollbar {
+  width: 0px;
 }
 
 .forumInput{
   margin: 24px;
   width: 24vw;
+  background-color: rgba(2, 2, 2, 0.5);
+  padding-bottom: 24px;
 }
 
 .forumContainer{
-  width: 50vw;
-  height: 60vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   padding: 36px;
-  background-color: rgb(58, 57, 57);
-  margin:100px auto;
+  background-color: rgba(2, 2, 2, 0.6);
+  margin:100px auto 0px auto;
+  position:fixed;
 }
 
 .forum-form{
-  padding-left: 22px;
+  padding: 0px 22px;
 }
 
 label{
