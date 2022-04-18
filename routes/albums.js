@@ -62,7 +62,7 @@ router.get('/albums/:id', (req, res) =>{   //note we are using router.get i/o ap
     res.render('albums', {   //render ONLY works with ejs files, no need to add .ejs bc it's looking in the 'views folder' so it knows it's an index.ejs file
         songTitlesLi,
         imgURL,
-        name
+        name, 
     })  
 
     

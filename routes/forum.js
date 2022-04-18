@@ -56,7 +56,7 @@ res.json(forumData)
 //delete a message //(added 3.27)
 router.delete('/api', (req, res)=>{
     let { id } = req.body;
-    //delete mssg from json file by SHIFT-ing from the javascript object, then convert obj to a json string and resave it
+    //delete mssg from json file by SPLICE-ing from the javascript object
     forumData.splice(id, 1);
 
     fs.writeFile('data/forum.json', JSON.stringify(forumData), 'utf8', err=>{  //pass in the file we want to write to- the reference is from the top of the application data
