@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-let port = 3000;
+let PORT = process.env.PORT || 8080;
 //above creates node project along with the 'listen on port' at bottom of file and the app.get 'route handler' with some page contents to send as a response to the browser
 
 
@@ -40,6 +40,6 @@ app.use(require('./routes/forum'))
 
 
 
-app.listen(port, ()=>{
-    console.log(`Listening on port ${port}`);
+app.listen(PORT, ()=>{
+    console.log(`Listening on port ${PORT}`);
 })
